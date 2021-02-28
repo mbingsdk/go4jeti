@@ -1,44 +1,14 @@
 {
   "Prefix": ",",
-  "Authoken": "u94054ce878048603c1edbf3292bc34ba:aWF0OiAxNjExMzU2NDczNTE3Cg==..fAzjA2UoGIZqZ3BMcpwzR0X4Ib4=",
+  "Authoken": "",
   "Status": {
     "Owner": "ue2330fdb6b7db69eb771c3176388d0ff",
-    "AssistToken": [
-      "u3a95e90b57be6982693bc360c2434240:aWF0OiAxNjExMzU2MTg3MTI3Cg==..wqoE2nhaBr8yan08fi+8xc9BMxk=",
-      "u44985045b4a104ecab2ab20086a5d177:aWF0OiAxNjExMzU3MDA2MjIzCg==..o+f+WpzFS+Hoxd2lt777Iri3ZAA="
-    ],
-    "Ajs": [
-      "uf3328b331add20af13dab1e19c05d25b:aWF0OiAxNjEyNjIzNDMxNDA0Cg==..bLbIv1Pxo8j1tCOjRBldLuVUhn8="
-    ],
+    "AssistToken": [],
+    "Ajs": [],
     "Adminlist": [],
     "Stafflist": [],
     "Blacklist": [],
-    "Staybot": {
-      "c095802485a7e0d93c97e681f1b236f1f": [
-        "u3a95e90b57be6982693bc360c2434240",
-        "u44985045b4a104ecab2ab20086a5d177"
-      ],
-      "c0bfe6b09d36425d622310df09a4893fc": [
-        "u3a95e90b57be6982693bc360c2434240",
-        "u44985045b4a104ecab2ab20086a5d177"
-      ],
-      "c0df5c5d030fe2c849c2be9fa29c133c7": [
-        "u3a95e90b57be6982693bc360c2434240",
-        "u44985045b4a104ecab2ab20086a5d177"
-      ],
-      "c25845591b528822f9c3351632494a322": [
-        "u3a95e90b57be6982693bc360c2434240",
-        "u44985045b4a104ecab2ab20086a5d177"
-      ],
-      "ccd75e47b41521ba752bb102a03a2d863": [
-        "u3a95e90b57be6982693bc360c2434240",
-        "u44985045b4a104ecab2ab20086a5d177"
-      ],
-      "cdd68ce4ea9ab23a60bb1f134f5f4cb8c": [
-        "u44985045b4a104ecab2ab20086a5d177",
-        "u3a95e90b57be6982693bc360c2434240"
-      ]
-    }
+    "Staybot": {}
   },
   "Settings": {
     "Pro-groupurl": {},
