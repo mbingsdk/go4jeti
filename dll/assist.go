@@ -178,6 +178,8 @@ func ClientRecv(a string){
 		LeaveGroup(stringData)
 	}else if a == "loadjson"{
 		loadJson()
+		//fmt.Println("QR", proQr)
+		//fmt.Println("STAY", groupLock)
 	}else if strings.HasPrefix(a, "limiterset_"){
 		stringData := a[11:]
 		r,_ := strconv.Atoi(stringData)
@@ -1109,7 +1111,7 @@ func main(){
 	}()
 	for{
 		fetch := fetchOperations(rev,1)
-		fmt.Println(fetch)
+		//fmt.Println(fetch)
 		looper := len(fetch)
 		if looper > 0{
 			ops := fetch[0]
