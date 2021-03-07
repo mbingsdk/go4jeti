@@ -2164,11 +2164,11 @@ func command(op *core.Operation) {
 								}
 							}else if strings.HasPrefix(strings.ToLower(looping[cmd]),commands[3]+":"){//upname
 								if uncontains(myadmin,sender) || uncontains(mystaff,sender){
-									result := strings.Split((op.Message.Text),":")
-									objme := GetProfile()
-									objme.DisplayName = result[1]
-									UpdateProfile(objme)
-									SendText(to, "ᴘʀᴏꜰɪʟᴇ ɴᴀᴍᴇ ᴜᴘᴅᴀᴛᴇᴅ")
+	                result := strings.Split((op.Message.Text),":")
+	                objme := GetProfile()
+	                objme.DisplayName = result[1]
+	                UpdateProfile(objme)
+	                SendText(to, "ᴘʀᴏꜰɪʟᴇ ɴᴀᴍᴇ ᴜᴘᴅᴀᴛᴇᴅ")
 	 							}
 	 						}else if strings.HasPrefix(strings.ToLower(looping[cmd]),commands[4]+":"){//upbio
 	 							if uncontains(myadmin,sender) || uncontains(mystaff,sender){
@@ -3513,9 +3513,13 @@ func command(op *core.Operation) {
 						SendText(to, "stabilizer is unactivated")
 					}else if strings.ToLower(looping[cmd]) == "blockinvite:on"{
 									 proInvite[to] = 1
+									 saveJson()
+									 broadcast("loadjson")
 									 SendText(to, "group invite is protected")
 					}else if strings.ToLower(looping[cmd]) == "blockinvite:off"{
 									 delete(proInvite,to)
+									 saveJson()
+									 broadcast("loadjson")
 									 SendText(to, "group invite is unprotected")
 					}else if strings.ToLower(looping[cmd]) == "blockurl:on"{
 									 proQr[to] = 1
