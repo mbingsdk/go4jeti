@@ -14,6 +14,4 @@
 
 > Fix Bug out Assist
 
-> Fix Load Config on/off Protection
-
 > ... Attribute assits (in Cooming)
