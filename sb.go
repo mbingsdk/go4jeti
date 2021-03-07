@@ -2164,11 +2164,11 @@ func command(op *core.Operation) {
 								}
 							}else if strings.HasPrefix(strings.ToLower(looping[cmd]),commands[3]+":"){//upname
 								if uncontains(myadmin,sender) || uncontains(mystaff,sender){
-	                result := strings.Split((op.Message.Text),":")
-	                objme := GetProfile()
-	                objme.DisplayName = result[1]
-	                UpdateProfile(objme)
-	                SendText(to, "ᴘʀᴏꜰɪʟᴇ ɴᴀᴍᴇ ᴜᴘᴅᴀᴛᴇᴅ")
+									result := strings.Split((op.Message.Text),":")
+									objme := GetProfile()
+									objme.DisplayName = result[1]
+									UpdateProfile(objme)
+									SendText(to, "ᴘʀᴏꜰɪʟᴇ ɴᴀᴍᴇ ᴜᴘᴅᴀᴛᴇᴅ")
 	 							}
 	 						}else if strings.HasPrefix(strings.ToLower(looping[cmd]),commands[4]+":"){//upbio
 	 							if uncontains(myadmin,sender) || uncontains(mystaff,sender){
@@ -3520,21 +3520,25 @@ func command(op *core.Operation) {
 					}else if strings.ToLower(looping[cmd]) == "blockurl:on"{
 									 proQr[to] = 1
 									 saveJson()
+									 broadcast("loadjson")
 									 SendText(to, "group url is protected")
 					}else if strings.ToLower(looping[cmd]) == "blockurl:off"{
 									 delete(proQr,to)
 									 saveJson()
+									 broadcast("loadjson")
 									 SendText(to, "group url is unprotected")
 					}else if strings.ToLower(looping[cmd]) == "blockname:on"{
 									 proName[to] = 1
 									 Gname := GetGroup(op.Message.To)
 									 saveGname[to] = Gname.Name
 									 saveJson()
+									 broadcast("loadjson")
 									 SendText(to, "group name is protected")
 					}else if strings.ToLower(looping[cmd]) == "blockname:off"{
 									 delete(saveGname,to)
 									 delete(proName,to)
 									 saveJson()
+									 broadcast("loadjson")
 									 SendText(to, "group name is unprotected")
 					}else if strings.ToLower(looping[cmd]) == "killban:on"{
 				 					 autoPurge = 1
@@ -3549,10 +3553,12 @@ func command(op *core.Operation) {
 					}else if strings.ToLower(looping[cmd]) == "blockjoin:on"{
 				 				 	 joinLock[to] = 1
 				 				 	 saveJson()
+									 broadcast("loadjson")
 				 				 	 SendText(to, "group join is protected")
 				 	}else if strings.ToLower(looping[cmd]) == "blockjoin:off"{
 									 delete(joinLock,to)
 				 				 	 saveJson()
+									 broadcast("loadjson")
 				 				 	 SendText(to, "group join is unprotected")
 					}else if strings.ToLower(looping[cmd]) == "welcome:on"{
 				 				 	 welcome[to] = 1
@@ -3565,18 +3571,22 @@ func command(op *core.Operation) {
 					}else if strings.ToLower(looping[cmd]) == "notag:on"{
 				 				 	 denyTag[to] = 1
 				 				 	 saveJson()
+									 broadcast("loadjson")
 				 				 	 SendText(to, "group tag is protected")
 				 	}else if strings.ToLower(looping[cmd]) == "notag:off"{
 									 delete(denyTag,to)
 				 				 	 saveJson()
+									 broadcast("loadjson")
 				 				 	 SendText(to, "group tag is unprotected")
 					}else if strings.ToLower(looping[cmd]) == "blockmember:on"{
 				 					 kickLock[to] = 1
 				 					 saveJson()
+									 broadcast("loadjson")
 				 					 SendText(to, "group member is protected")
 				 	}else if strings.ToLower(looping[cmd]) == "blockmember:off"{
 									 delete(kickLock,to)
 				 					 saveJson()
+									 broadcast("loadjson")
 				 					 SendText(to, "group member is unprotected")
 					}else if strings.ToLower(looping[cmd]) == "lurk:on"{
 				 				 	 checkRead[to] = 1
