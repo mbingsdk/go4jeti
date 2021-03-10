@@ -3368,25 +3368,29 @@ func command(op *core.Operation) {
 									allmanagers := []string{myowner}
 									nourut := 2
 									listadm := "Managers:\n\n"
-									listadm += "— *** OWNER *** —"
+									listadm += "OWNER:"
 									listadm += "\n1. @!"
 									//allmanagers = append(allmanagers,myowner)
 									if len(myadmin) > 0{
-										listadm += "\n\n— *** ADMIN *** —"
+										listadm += "\n\nADMIN:"
 										for i:= range myadmin{
 											allmanagers = append(allmanagers,myadmin[i])
 											listadm += "\n"+strconv.Itoa(i+nourut) + ". @!"
 										}
 										nourut = len(myadmin)+2
-									}else{listadm += "\n\n— *** ADMIN *** —\n"}
+									}else{
+										listadm += "\n\nADMIN:\n"
+									}
 									if len(mystaff) > 0{
-										listadm += "\n\n— *** STAFF *** —"
+										listadm += "\n\nSTAFF:"
 										for i:= range mystaff{
 											allmanagers = append(allmanagers,mystaff[i])
 											listadm += "\n"+strconv.Itoa(i+nourut) + ". @!"
 										}
-									}else{listadm += "\n\n— *** STAFF *** —\n"}
-									fmt.Println(listadm,allmanagers)
+									}else{
+										listadm += "\n\nSTAFF:\n"
+									}
+									listadm += "\n"
 									SendTextMentionByList(to,listadm,allmanagers)
 								}else if strings.ToLower(looping[cmd]) == "squadlist"{
 									listbot := "Squad List:\n"
@@ -3394,8 +3398,10 @@ func command(op *core.Operation) {
 										for i:= range myteam{
 											listbot += "\n"+strconv.Itoa(i+1) + ". @!"
 										}
-										SendTextMentionByList(to,"squad list:\n",myteam)
-									}else{SendText(to, "Squad List:\n")}
+										SendTextMentionByList(to,listbot,myteam)
+									}else{
+										SendText(to, "Squad List:\n")
+									}
 								}else if strings.HasPrefix(strings.ToLower(looping[cmd]),"getmid"){
 									mentions := mentions{}
 									json.Unmarshal([]byte(op.Message.ContentMetadata["MENTION"]), &mentions)
