@@ -14,4 +14,8 @@
 
 > Fix Bug out Assist
 
+> Fix Cek Squadlist
+
+> Fix Cek Managers
+
 > ... Attribute assits (in Cooming)
