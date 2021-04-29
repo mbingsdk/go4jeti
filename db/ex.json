@@ -1,9 +1,9 @@
 {
   "Prefix": ",",
-  "Authoken": "",
+  "Authoken": "Token Induk",
   "Status": {
     "Owner": "ue2330fdb6b7db69eb771c3176388d0ff",
-    "AssistToken": [],
+    "AssistToken": ["TokenAssist1","TokenAssist2"],
     "Ajs": [],
     "Adminlist": [],
     "Stafflist": [],
